@@ -1,5 +1,5 @@
 # Demo UI
-![]("/../Screenshot/Screenshot.png")
+![](/Screenshot/Screenshot.png)
 
 # how to run
 1. make an .env file 
