@@ -1,0 +1,21 @@
+.nav {
+  height: 100vh;
+  background: black;
+  padding: 10px 0;
+  min-width: 210px;
+}
+.nav_item {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #ab8484;
+  font-family: Roboto;
+  font-size: 19px;
+  font-style: normal;
+  line-height: normal;
+  transition: all 100ms ease-in-out;
+}
+.nav_item_active,
+.nav_item:hover {
+  color: white;
+  background: blue;
+}

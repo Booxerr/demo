@@ -1,0 +1,25 @@
+.manageSettings__header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.manageSettings__header > p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.manageSettings__chipContainer {
+ overflow-x:auto ;
+ overflow-y:hidden;
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+.manageSettings__table{
+    padding: 10px;
+}

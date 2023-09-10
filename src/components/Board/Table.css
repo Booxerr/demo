@@ -1,0 +1,34 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  min-height: 45px !important;
+}
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  width: 100%;
+}
+tr:first-child {
+  background-color: #dddddd;
+}
+.name {
+  width: 13%;
+}
+.num,
+.role {
+  width: 12%;
+}
+.table_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.table_button {
+  margin: 3px;
+}

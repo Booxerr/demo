@@ -1,0 +1,20 @@
+.chip {
+    border: 1px solid #ab8484;
+    display: inset-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: Roboto;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ab8484;
+        white-space: nowrap;
+  }
+  
+  .chip_activate,
+  .chip:hover {
+    cursor: pointer;
+    background: blue;
+    color: #fff;
+    border: 1px solid transparent;
+  }
