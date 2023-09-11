@@ -1,7 +1,7 @@
 import { FormControl, OutlinedInput } from "@mui/material";
 import React from "react";
 
-function TextInput({ label, w, value, onChange }) {
+function TextInput({ label, w, value, onChange, type }) {
   return (
     <div
       style={{
@@ -21,6 +21,7 @@ function TextInput({ label, w, value, onChange }) {
           {label}
         </p>
         <OutlinedInput
+          type={type ? type : "text"}
           onChange={onChange}
           value={value}
           fullWidth

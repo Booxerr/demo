@@ -21,5 +21,7 @@
   padding: 10px 0;
 }
 .manageSettings__table{
+  overflow: scroll;
+  height: calc(100vh - 150px);
     padding: 10px;
 }

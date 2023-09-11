@@ -76,6 +76,11 @@ function PopupCard() {
   };
 
   const handleClose = () => {
+    setName("");
+    setNumber("");
+    setCode("+91");
+    setStore("");
+    setRole(null);
     setOpen(false);
   };
 
@@ -127,9 +132,10 @@ function PopupCard() {
                     setCode(el.target.value);
                   }}
                   w="20%"
-                  label="Code*"
+                  label="Code"
                 />
                 <TextInput
+                  type="number"
                   value={number}
                   onChange={(el) => {
                     setNumber(el.target.value);

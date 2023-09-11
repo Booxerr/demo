@@ -21,6 +21,7 @@
 }
 
 .body {
+overflow: auto;
   grid-column: span 8; /* Take up all three columns in the row */
   /* grid-row: span 2;   Take up two rows in the column */
   /* Additional styling for body if needed */
