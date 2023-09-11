@@ -4,6 +4,7 @@ import { setActiveStore } from "./reducers.js";
 const initialState = {
   updatedAt: null,
   activeStore: "acf2d038-7742-461d-9ce9-d5322f96be74",
+  businessId: "VgwLq1sKrUdkxsSuTKEhEF5b8KG3",
   loading: false,
 };
 

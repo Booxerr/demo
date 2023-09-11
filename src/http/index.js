@@ -6,8 +6,8 @@ const api = axios.create({
   headers: {
     "Content-type": "application/json",
     Accept: "application/json",
-    // "Access-Control-Allow-Origin": "*",
-    // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
   },
 });
 
@@ -17,6 +17,18 @@ export const getStore = (business_id) => {
 
 export const getStaff = (storeId) => {
   return api.get(`/api/v2/staffAccess/get/${storeId}`);
+};
+
+export const addStaff = (body) => {
+  return api.post(`/api/v1/staff/get`,body);
+};
+
+export const updateStaff = (body) => {
+  return api.post(`/api/v1/staff/update`,body);
+};
+
+export const addStaffRole = (body) => {
+  return api.post(`/api/v1/staffAccess/add`,body);
 };
 
 export const deleteStaff = (staffId) => {

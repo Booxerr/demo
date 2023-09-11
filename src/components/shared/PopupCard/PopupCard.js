@@ -7,11 +7,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import TextInput from "../TextInput/TextInput";
 import DropDown from "../DropDown/DropDown";
 import "./PopupCard.css";
+import { addStaff, addStaffRole } from "../../../http";
 
 const roleMenu = [
-  { id: 0, name: "Store Admin,0" },
-  { id: 1, name: "Sales Operator,1" },
-  { id: 3, name: "Sales Purchase Operator,2" },
+  { id: 0, name: "Store Admin,0,STORE_MANAGER" },
+  { id: 1, name: "Sales Operator,1,SALES_MANAGER," },
+  { id: 3, name: "Sales Purchase Operator,2,SALES_PURCHASE_MANAGER" },
 ];
 
 const roleData = [
@@ -59,6 +60,8 @@ function PopupCard() {
   const [role, setRole] = useState(null);
 
   const storesList = useSelector((state) => state.storesSlice);
+  const activeStore = useSelector((state) => state.dashboardSlice.activeStore);
+  const businessId = useSelector((state) => state.dashboardSlice.businessId);
 
   const storesMenu = useMemo(() => {
     return storesList?.stores?.map((item) => ({
@@ -84,15 +87,27 @@ function PopupCard() {
     setOpen(false);
   };
 
-  const handelSave = () => {
-    const formData = {
+  const handelSave = async () => {
+    const formData1 = {
+      businessId,
       name,
-      code,
-      store,
-      role,
-      number,
+      phone: `${code}${number}`,
+      staffId: "",
     };
-    console.log(formData);
+
+    try {
+      const newUser = await addStaff(formData1);
+      // console.log(newUser.data);
+      const formData2 = {
+        access_type: role.split(",")[2],
+        staffId: newUser.data.staffId,
+        storeId: store.split(",")[1],
+      };
+      const newRoleUser = await addStaffRole(formData2);
+    } catch (error) {
+      console.log(error);
+    }
+
     handleClose();
   };
 

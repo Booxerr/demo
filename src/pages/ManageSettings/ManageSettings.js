@@ -9,13 +9,14 @@ import { staffActions } from "../../store/staffSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { checkDataFitchTime } from "../../util/checkDataFatchTime";
 
-const BusinessId = "VgwLq1sKrUdkxsSuTKEhEF5b8KG3";
+// const BusinessId = "VgwLq1sKrUdkxsSuTKEhEF5b8KG3";
 
 function ManageSettings() {
   const dispatch = useDispatch();
 
   const stores = useSelector((state) => state.storesSlice);
   const activeStore = useSelector((state) => state.dashboardSlice.activeStore);
+  const BusinessId = useSelector((state) => state.dashboardSlice.businessId);
   const staff = useSelector(
     (state) => state.staffSlice.storeStaff[activeStore]
   );
